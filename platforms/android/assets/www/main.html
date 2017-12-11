@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+     <link rel="stylesheet" href="css/framework7-icons.css">
+      <link rel="stylesheet" href="path/to/framework7.ios.min.css">
+    <!-- It should be included After main Framework7 styles -->
+    <link rel="stylesheet" href="path/to/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="path/to/framework7.material.min.css">
+    <!-- It should be included After main Framework7 styles -->
+    <link rel="stylesheet" href="path/to/framework7.material.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+    <!-- Path to your custom app styles-->
+ 
+  </head>
+
+  <body class="theme-orange" >
+   
+
+<!-- First, we need to add Panel's overlay that will overlays app while panel is opened -->
+<div class="panel-overlay"></div>
+ 
+    <!-- Left panel, let it be with reveal effect -->
+       
+      
+<div class="panel panel-left panel-reveal">
+        
+
+        <div class="list-block">
+              <ul>
+          
+
+
+    <h3><i class="f7-icons"></i>MENU</h3>
+  <ul>
+      <div class="page-content">
+      <div class="content-block"> 
+        <p><a href="#" data-popup=".popup-about" class="open-popup">Sobre Nosotros</a></p>
+      </div>
+  <div class="popup popup-about">
+    <div class="content-block">
+      <p>Sobre PortalNews</p>
+      <p><a href="#" class="close-popup">Cerrar</a></p>
+      <p>PortalNews entrega titulares de las noticias que se dan día a día en la ciudad de chillán y sus alrededores,pero no tan solo informa sobre las noticias que acontecen a diario, sino que tambien tenemos la ubicacón en donde ocurrio dicha noticia.
+      De esta menera se trata de entregar el mejor servicio a nuestro usuarios y de esta manera ir creciendo para que todas las personas esten informadas sobre lo que acontece a diario.</p>
+    </div>
+  </div>
+</div>
+
+    
+    <li>
+      <a id="cerrar" href="#" class="item-link list-button">Cerrar Sesión</a>
+    </li>
+  </ul>
+         
+<style>
+#imagen {
+   
+max-width: 40%;
+height: 20px;
+margin: 20px;
+padding: 5px;
+display: block;
+margin: auto;
+}
+.centrar-imagen {
+text-align: center;
+}
+
+</style>
+          <div class="centrar-imagen">
+         <img src="img/PortalNews.png" width="270px" style="transform: rotate (-90deg);"/>
+    </div>
+
+         </ul>
+  
+     </div>
+   </div>
+
+
+    <!-- Right panel, with cover effect -->
+   <!-- Views -->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-fixed toolbar-fixed">
+          <!-- Page, "data-page" contains page name -->
+          <div data-page="index" class="page">
+ 
+            <!-- Top Navbar. In Material theme it should be inside of the page-->
+            <div class="navbar theme-black">
+              <div class="navbar-inner">
+                 <div class="left"> 
+                   <a class="link open-panel" data-panel="left">
+                    <i class="f7-icons">menu</i>
+                  </a>
+                 </div>
+                <div class="center"><img src="img/PortalNews.png" width="250px" style="transform: rotate (-90deg);"/></div>
+              </div>
+            </div>
+ 
+            <!-- Scrollable page content -->
+            <div class="page-content">
+<h3>Noticias</h3>
+
+<table id="listado"  width="100%"> 
+
+  <tr> 
+     <th>titulo</th>
+      <th>comentario</th>
+       <th>latitud</th>
+        <th>longitud</th>
+         <th>id_usuario</th>
+  </tr>
+</table>
+
+
+
+              <!-- Link to another page -->
+              </div>
+            </div>
+          </div>
+          <div class="toolbar">
+<p class="buttons-row ">
+  <a id="publicar" href="#" class="button button-big">PUBLICAR NOTICIA</a>
+</p>
+<br></br>
+</div>
+        </div>
+      </div>
+   
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app1.js"></script>
+  </body>
+<script type="text/javascript" src="cordova.js"></script>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app2.js"></script>
+
+    <script type="text/javascript">
+      $(document).on("ready", function() {
+        listar();
+      });
+      var listar = function(){
+        var table= $("#listado").DataTable({
+            "ajax":{
+              "method":"POST",
+              "url": "https://feacontr.000webhostapp.com/listar.php"
+            },
+            "columns":[
+                {"row2":"titulo"},
+                {"row2":"comentario"},
+                {"row2":"ltd"},
+                {"row2":"lng"},
+                {"row2":"id_usuario"}
+            ]
+        });
+      }
+
+    </script>
+</html> 

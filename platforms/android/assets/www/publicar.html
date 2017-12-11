@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/framework7-icons.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+    <style>
+       #map {
+         width: 70%;
+         height: 70%;
+         background-color: grey;
+        margin:20px 60px;
+
+       }
+    </style>
+  </head>
+  <body class="theme-orange">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <!-- We have home navbar without left link-->
+            <div class="left">
+            <a id="atras" href="#" class="link">
+                <i class="icon icon-back"></i>
+                <span>Atras</span>
+            </a>
+            </div>
+            <div class="center sliding">Publicar Noticia</div>
+            <div class="right">
+            </div>
+          </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Page, data-page contains page name-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+
+           <center> 
+            <div class="list-block inset">
+              <ul>
+                <li class="align-top">
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-input">
+                        <textarea id="titulo" name="titulo" rows="1" cols="35" maxlength="30" placeholder="titulo"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>  
+
+<div class="list-block inset">
+              <ul>
+                <li class="align-top">
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-input">
+                        <textarea  id="comentario"   name="comentarios" rows="7" cols="40" maxlength="280" placeholder="comentario"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+
+      <div class="item-content">
+        <div class="item-media"><i class="icon f7-icons"></i></div>
+        <div class="item-inner">
+          <div class="item-title label"></div>
+          <div class="item-input">
+            <input id="lat" type="text" placeholder="Latitud" readonly="readonly" style="visibility:hidden">
+          </div>
+        </div>
+      </div>
+
+      <div class="item-content">
+        <div class="item-media"><i class="icon f7-icons"></i></div>
+        <div class="item-inner">
+          <div class="item-title label"></div>
+          <div class="item-input">
+            <input id ="lon" type="text" placeholder="Longitud" readonly="readonly" style="visibility:hidden">
+          </div>
+        </div>
+      </div>
+                            <div class="item-content" style="padding-top: 3px;">   
+                                <div class="item-inner">
+                                  <div class="item-input">
+                                      <a id="guard" class="button button-big color-orange">
+                                <i class="f7-icons color-black size-22"></i>
+                                Obtener Coordenadas 
+                              </a>
+                                  </div>
+                                </div>
+                            </div>       
+       <br>
+              </center>          
+                            <div class="item-content" style="padding-top: 3px;">   
+                              <div class="item-inner">
+                                  <div class="item-input">
+                                      <a id="pub" class="button button-big color-orange">
+                                <i class="f7-icons color-black size-22"></i>
+                                Publicar 
+                              </a>
+                                  </div>
+                            </div>
+                           </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app4.js"></script>
+    <script type="text/javascript" src="js/my-app2.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <!-- AIzaSyB4T8UukN jQm1Olr8b6ajAbjmR7D29d20 -->
+    <script async defer
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4T8UukN_jQm1Olr8b6ajAbjmR7D29d20&callback=initMap"></script>
+  </body>
+</html>

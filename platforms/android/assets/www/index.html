@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+     <link rel="stylesheet" href="css/framework7-icons.css">
+      <link rel="stylesheet" href="path/to/framework7.ios.min.css">
+    <!-- It should be included After main Framework7 styles -->
+    <link rel="stylesheet" href="path/to/framework7.ios.colors.min.css">
+
+
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+  </head>
+  <body class="theme-orange">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <!-- We have home navbar without left link-->
+            <div class="center sliding">Bienvenidos a "Portal News"</div>
+            <div class="right">
+            </div>
+          </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Page, data-page contains page name-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+              
+              
+    <!-- Inset content block -->
+    <div class="content-block inset">
+      <div class="content-block-inner">
+         
+         
+<style>
+#imagen {
+   
+max-width: 40%;
+height: 20px;
+margin: 20px;
+padding: 5px;
+display: block;
+margin: auto;
+}
+.centrar-imagen {
+text-align: center;
+}
+
+</style>
+          <div class="centrar-imagen">
+         <img src="img/PortalNews.png" width="270px" style="transform: rotate (-90deg);"/>
+        
+
+    </div>
+             <div class="content-block">
+                
+            
+
+              <center>  
+                  <div class="list-block">
+                  <p><a href="#" class="open-login-screen">Ingresar</a></p> 
+                  <p><a href="#" data-popup=".popup-registro" class="open-popup">Registrase</a></p>
+                  </div>
+                </center>
+
+
+                
+                
+                           
+                 
+    
+               
+              </div>
+             
+    <!-- Inset content block -->
+    
+  
+            </div>
+
+
+
+            <div class="login-screen">
+              <div class="view">
+                <div class="page">
+                  <div class="page-content login-screen-content">
+                    <div class="login-screen-title">Cuenta</div>
+                    <form>
+                      <div class="list-block">
+                        <ul>
+                          <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title label">Email</div>
+                              <div class="item-input">
+                                <input type="text" id="correo" placeholder="tu email">
+                              </div>
+                            </div>
+                          </li>
+                          <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title label">Contraseña</div>
+                              <div class="item-input">
+                                <input type="password" id="password" placeholder="tu contraseña">
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="list-block">
+                        <ul>
+                          <li><a id="iniciar" href="#" class="item-link list-button">Iniciar Sesión</a></li>
+                        </ul>
+                        <div class="list-block-label">
+                          <p>------------------</p>
+                          <p><a href="#" class="close-login-screen">Cerrar Ventana</a></p>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    
+
+
+
+    <div class="popup popup-registro">
+    <div class="content-block">
+     
+          <div class="content-block-title  color-green"><p>Ingresa tus datos para registrarte</p></div>
+                    <div class="list-block">
+                      <ul>
+                      
+
+<!--nombre-->
+      <li>
+      <div class="item-content">
+        <div class="item-media"><i class="icon f7-icons">person</i></div>
+        <div class="item-inner">
+          <div class="item-title label">Nombre</div>
+          <div class="item-input">
+            <input id="nombre" type="text" placeholder="Tu nombre">
+          </div>
+        </div>
+      </div>
+    </li>
+
+<!--apellido-->
+      <li>
+      <div class="item-content">
+        <div class="item-media"><i class="icon f7-icons">person</i></div>
+        <div class="item-inner">
+          <div class="item-title label">apellido</div>
+          <div class="item-input">
+            <input  id="apellido" type="text" placeholder="Apellido">
+          </div>
+        </div>
+      </div>
+    </li>
+
+<!--email-->
+
+    <li>
+      <div class="item-content">
+        <div class="item-media"><i class="icon f7-icons">email</i></div>
+        <div class="item-inner">
+          <div class="item-title label">E-mail</div>
+          <div class="item-input">
+            <input id="email" type="email" placeholder="E-mail">
+          </div>
+        </div>
+      </div>
+    </li>
+<!--pass-->
+      <li>
+      <div class="item-content">
+        <div class="item-media"><i class="icon f7-icons">lock</i></div>
+        <div class="item-inner">
+          <div class="item-title label">password</div>
+           <div class="item-input">
+          <input  id="pass" type="password" name="pass" placeholder="Password" id="passWeb">
+        </div>
+        </div>
+      </div>
+    </li>  
+    <!-- sexo -->
+    <li>
+      <div class="item-content">
+        <div class="item-media"><i class="icon f7-icons">persons</i></div>
+        <div class="item-inner">
+          <div class="item-title label">Genero</div>
+          <div class="item-input">
+            <select id="sexo">
+              <option value="M">Masculino</option>
+              <option value="F">Femenino</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </li>
+    <!-- fecha -->
+    <li>
+      <div class="item-content">
+        <div class="item-media"><i class="icon f7-icons">calendar</i></div>
+        <div class="item-inner">
+          <div class="item-title label">Edad</div>
+          <div class="item-input">
+            <input id="edad" type="date" placeholder="fecha de Nacimiento" value="2017-11-07">
+          </div>
+        </div>
+      </div>
+    </li>
+        <li>
+                            <div class="item-content" style="padding-top: 3px;">   
+                                <div class="item-inner">
+                                  <div class="item-input">
+                                      <a id="guardar" class="button button-big color-green">
+                                <i class="f7-icons color-black size-22"></i>
+                                Registrarse
+                              </a>
+                                  </div>
+                                </div>
+                            </div>
+                        </li>
+                      </ul>
+
+                    </div>
+                    </div>
+
+                         <center>   
+        <p><a href="#"  class="close-popup  color-red">volver atrás</a></p>
+      </center> 
+</div>
+                    <center>   
+        <p><a href="#"  class="close-popup  color-red">volver atrás</a></p>
+      </center>    
+             
+       
+    </div>
+
+
+
+  <script type="text/javascript" src="cordova.js"></script>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+</html>
